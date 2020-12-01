@@ -65,5 +65,5 @@ windchill = []
 for temp, windspeed in zip(data['tempout'], data['windspeed']):
     windchill.append(compute_windchill(temp, windspeed))
 
-print(windchill)
-
+for wc_data, wc_comp in zip(data['windchill'], windchill):
+    print(f'{wc_data:.5f} {wc_comp:.5f} {wc_data - wc_comp:.5f}')
