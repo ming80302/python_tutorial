@@ -1,8 +1,8 @@
 # Column names and column indices to read
-columns = {'date':0, 'time':1, 'tempout':2, 'windspeed':7}
+columns = {'date':0, 'time':1, 'tempout':2, 'windspeed':7, 'windchill':12}
 
 # data types for each column 
-types = {'tempout':float, 'windspeed':float}
+types = {'tempout':float, 'windspeed':float, 'windchill':float}
 
 # Initialized my data variable
 #data = {'date':[], 'time':[], 'tempout':[]}
@@ -53,7 +53,7 @@ def compute_windchill(t, v):
     a = 35.74
     b = 0.6215
     c = 35.75
-    d = 1.4275
+    d = 0.4275
    
     v16 = v**0.16
     wci = a + (b*t) - (c*v16) + (d*t*v16)
